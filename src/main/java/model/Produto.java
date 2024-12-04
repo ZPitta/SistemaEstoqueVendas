@@ -1,12 +1,13 @@
 package model;
 
-public class Produtos {
+public class Produto {
     private String descricao;
     private String codigo;
     private double preco;
     private int quantidadeEstoque;
+    private String categoria;
 
-    public Produtos(String descricao, String codigo, double preco, int quantidadeEstoque) {
+    public Produto(String descricao, String codigo, double preco, int quantidadeEstoque) {
         this.descricao = descricao;
         this.codigo = codigo;
         this.preco = preco;
@@ -30,6 +31,10 @@ public class Produtos {
         return quantidadeEstoque;
     }
 
+    public String getCategoria() {
+        return categoria;
+    }
+
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
@@ -46,13 +51,18 @@ public class Produtos {
         this.quantidadeEstoque = quantidadeEstoque;
     }
 
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
     @Override
     public String toString() {
         return "Produto{" +
                 "código='" + codigo + '\'' +
                 ", descrição='" + descricao + '\'' +
                 ", preco=" + preco +
-                ", quantidadeEstoque=" + quantidadeEstoque +
+                ", quantidadeEstoque=" + quantidadeEstoque + '\'' +
+                ", categoria='" + categoria + '\'' +
                 '}';
     }
 }
